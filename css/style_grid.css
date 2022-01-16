@@ -128,18 +128,18 @@ nav {
 }
 
 .contain-main {
-    min-height: 100vh;
+    min-height: 100vh;  
     /* force le footer à rester en bas de page */
 }
 
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    /* flex-wrap: wrap; */
+    /* align-content: flex-start; */
+    grid-gap: 10px;
     margin: 20px 0 20px;
-    /* min-height: 100vh; */
-    /* force le footer à rester en bas de page */
 }
 
 main article {
@@ -343,6 +343,14 @@ footer div ul li a {
 }
 
 /* ===================================================== */
+
+@media all and (max-width:640px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+}
 
 @media all and (min-width:440px) and (max-width: 600px) {
 

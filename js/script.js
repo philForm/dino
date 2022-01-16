@@ -92,7 +92,7 @@ for (let item in dinos) {
     )
 }
 
-injectElt(dinoArray, ".container>main")
+injectElt(dinoArray, ".container>div>main")
 
 
 
