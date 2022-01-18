@@ -62,37 +62,40 @@ console.log(dinos)
 
 console.log(dinos[1].title)
 
+const dinoFunc = () => {
 
-for (let item in dinos) {
+    for (let item in dinos) {
 
-    dinoArray.push(
-        ` <article id="${dinos[item].articleId}">
-                <div class="color">
-                    <div>
+        dinoArray.push(
+            ` <article id="${dinos[item].articleId}">
+                    <div class="color">
                         <div>
-                            <h2>${dinos[item].title}</h2>
+                            <div>
+                                <h2>${dinos[item].title}</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="align">
-                        <p>
-                            <img src="./images/${dinos[item].image}" alt="${dinos[item].alt}">
-                        </p>
-                        <div class="descrip">
+                        <div class="align">
                             <p>
-                                ${dinos[item].description}
+                                <img src="./images/${dinos[item].image}" alt="${dinos[item].alt}">
                             </p>
+                            <div class="descrip">
+                                <p>
+                                    ${dinos[item].description}
+                                </p>
+                            </div>
                         </div>
+                        <p>
+                            <a class="button" href="${dinos[item].wiki}" target="_blank">En savoir plus !</a>
+                        </p>
                     </div>
-                    <p>
-                        <a class="button" href="${dinos[item].wiki}" target="_blank">En savoir plus !</a>
-                    </p>
-                </div>
-            </article>
-        `
-    )
+                </article>
+            `
+        )
+    }
+    return dinoArray
 }
 
-injectElt(dinoArray, ".container>div>main")
+injectElt(dinoFunc(), ".container>div>main")
 
 
 

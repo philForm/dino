@@ -16,7 +16,7 @@ html {
     --shadow_light_brown: 3px 4px 4px #6a6464;
     --dark_green: #1f6871;
     --dark_orange: darkorange;
-    --pale_yellow: #eee8aa;
+    --pale_yellow: #eaed7b;
     --text: 1.3rem;
     --text-nav: 3.2rem
 }
@@ -34,18 +34,19 @@ html {
 }
 
 
-body {
-    background: linear-gradient(296deg, #344c15, #59a76b63)
+.container {
+    background: linear-gradient(296deg, #344c15, #59a76b63);
+    /* position: relative; */
+    /* min-height: 100vh; */
 }
 
-/* .container {
+.contain-menu {
     position: relative;
-    min-height: 100%;
-} */
+    flex-wrap: wrap;
+}
 
 .contain-menu, nav ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -53,42 +54,20 @@ body {
 .contain-menu, footer {
     background: url("../images/fresque.jpg") no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: 100vw;
     min-height: 100px;
     font-family: 'JurassicPark', sans-serif;
     box-shadow: -1px 5px 20px 2px #4b3b3b;
 }
 
-.contain-menu {
-    position: relative;
-}
 
 .contain-title {
     display: block;
     font-size: 5rem;
     margin-left: 10px;
-    color: #eaed7b;
+    color: var(--pale_yellow);
     text-shadow: var(--shadow_brown);
 }
-
-img[alt*="silhouette"] {
-    width: 150px;
-    transform: rotate(10deg);
-    filter: drop-shadow(var(--shadow_brown));
-    position: relative;
-    top: 12px;
-}
-
-
-img[alt*="silhouette"]+img {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-
-}
-
 
 @keyframes rotate {
     from {
@@ -101,9 +80,30 @@ img[alt*="silhouette"]+img {
 }
 
 img[alt*="silhouette"] {
+    width: 150px;
+    transform: rotate(10deg);
+    filter: drop-shadow(var(--shadow_brown));
+    position: relative;
+    top: 12px;
     animation: rotate 1s 9 alternate ease;
 }
 
+
+img[alt*="silhouette"]+img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+    z-index: 2;
+}
 
 nav ul li {
     font-size: var(--text-nav);
@@ -119,16 +119,8 @@ nav ul li a:hover {
     color: var(--dark_orange);
 }
 
-
-nav {
-    display: flex;
-    align-items: flex-end;
-    margin-right: 10px;
-    z-index: 2;
-}
-
 .contain-main {
-    min-height: 100vh;  
+    min-height: 100vh;
     /* force le footer à rester en bas de page */
 }
 
@@ -136,16 +128,14 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
-    /* flex-wrap: wrap; */
-    /* align-content: flex-start; */
-    grid-gap: 10px;
+    grid-gap: .8rem;
     margin: 20px 0 20px;
 }
 
 main article {
     /* position: relative; */
     width: 300px;
-    margin: 0.4rem;
+    margin: .4rem;
     filter: drop-shadow(var(--shadow_light_brown));
 
 
@@ -174,12 +164,12 @@ div.color {
 
 main article h2 {
     position: absolute;
-    top: -6px;
+    /* top: -6px; */
     font-family: 'JurassicPark', sans-serif;
     font-size: 5.6rem;
     font-weight: 500;
     color: var(--dark_orange);
-    padding: 5px 0;
+    /* padding: 5px 0; */
 }
 
 /* .align {
@@ -199,12 +189,11 @@ main article h2 {
 }
 
 .align p:first-child {
-
     overflow: hidden;
     margin-bottom: 10px;
 }
 
-.descrip {
+div.descrip {
     position: relative;
     padding: 0 10px 20px;
     text-align: justify;
@@ -251,7 +240,7 @@ main article p:last-child {
 
 footer {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-evenly;
     background-position: bottom;
 }
@@ -311,9 +300,12 @@ footer div ul li a {
     }
 }
 
-@media all and (max-width:400px) {
+/* ================================= */
+/* ================================= */
+
+@media all and (max-width:440px) {
     main article {
-        width: 86%;
+        width: 90%;
     }
 
     .align p img {
@@ -343,8 +335,10 @@ footer div ul li a {
 }
 
 /* ===================================================== */
+/* ===================================================== */
 
-@media all and (max-width:640px) {
+/* de grid on repasse en flex */
+@media all and (max-width:650px) {
     main {
         display: flex;
         flex-wrap: wrap;
@@ -352,23 +346,10 @@ footer div ul li a {
     }
 }
 
+/* ===================================================== */
+/* ===================================================== */
+
 @media all and (min-width:440px) and (max-width: 600px) {
-
-    /* nav ul {
-        display: block;
-        position: relative;
-        bottom: 6px;
-    } */
-
-
-    footer {
-        display: block;
-        text-align: center;
-    }
-
-    footer div {
-        padding-bottom: 20px;
-    }
 
     main article, .align p img {
         width: 400px;
@@ -376,10 +357,9 @@ footer div ul li a {
 }
 
 /* ===================================================== */
+/* ===================================================== */
 
-
-
-@media all and (min-width:600px) and (max-width: 640px) {
+@media all and (min-width:600px) and (max-width: 650px) {
 
 
     @keyframes appear {
@@ -438,16 +418,11 @@ footer div ul li a {
 }
 
 /* ================================================ */
+/* ================================================ */
 
 /* @media all and (orientation: portrait) {
 
     .contain-menu, footer {
         background: red;
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul {
-        margin-left: 20px;
     }
 } */
