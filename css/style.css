@@ -123,13 +123,13 @@ div.contain-main {
     /* force le footer à rester en bas de page */
 }
 
-main {
+/* main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
     margin: 20px 0 20px;
-}
+} */
 
 main article {
     /* position: relative; */
@@ -194,7 +194,7 @@ div.descrip {
     position: relative;
     padding: 0 10px 20px;
     text-align: justify;
-    top: -4px;
+    top: -2px;
 
 }
 
@@ -371,11 +371,12 @@ footer div ul li a {
 
     .align {
         display: table;
+        /* display: inline-block; */
         /* pour éviter les débordements */
     }
 
     .align p:first-child {
-        /* display: flex; */
+        display: flex;
         /* pour que l'overflow fonctionne */
         float: left;
         /* overflow: hidden; */

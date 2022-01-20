@@ -1,0 +1,16 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    grid-gap: .8rem;
+    margin: 20px 0 20px;
+}
+
+/* de grid on repasse en flex */
+@media all and (max-width:650px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+}
