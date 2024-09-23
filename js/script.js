@@ -9,7 +9,7 @@ const dinos = [
     {
         articleId: "tyrannosaurus",
         title: "Le Tyrannosaure",
-        description: "Tyrannosaurus, communément appelé tyrannosaure, est un genre éteint de       dinosaures théropodes appartenant à la famille des Tyrannosauridae et ayant vécu durant la partie supérieure du Maastrichtien, ...",
+        description: "Tyrannosaurus, communément appelé tyrannosaure, est un genre éteint de dinosaures théropodes appartenant à la famille des Tyrannosauridae et ayant vécu durant la partie supérieure du Maastrichtien, ...",
         image: "tyrannosaurus_rex.jpg",
         alt: "le tyrannosaure",
         wiki: 'https://fr.wikipedia.org/wiki/Tyrannosaurus'
