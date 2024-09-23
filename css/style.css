@@ -40,21 +40,21 @@ html {
     /* min-height: 100vh; */
 }
 
-.contain-menu {
-    position: relative;
-    flex-wrap: wrap;
-}
 
 .contain-menu, nav ul {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+.contain-menu {
+    position: relative;
+}
 
 .contain-menu, footer {
     background: url("../images/fresque.jpg") no-repeat;
     background-attachment: fixed;
-    background-size: 100vw;
+    background-size: cover;
     min-height: 60px;
     font-family: 'JurassicPark', sans-serif;
     box-shadow: -1px 5px 20px 2px #4b3b3b;
