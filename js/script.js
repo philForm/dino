@@ -58,10 +58,6 @@ const dinos = [
 
 let dinoArray = []
 
-console.log(dinos)
-
-console.log(dinos[1].title)
-
 const dinoFunc = () => {
 
     for (let item in dinos) {
